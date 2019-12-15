@@ -3,7 +3,7 @@ WORKDIR /user/src/app
 COPY server/package.json server/package-lock.json ./
 RUN npm install
 COPY server/ ./
-RUN num run build
+RUN npm run build
 
 FROM node:alpine as client
 WORKDIR /user/src/app
