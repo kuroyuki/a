@@ -2,6 +2,7 @@
 
 # compiled output
 client/dist
+server/dist
 
 # dependencies
 client/node_modules

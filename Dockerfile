@@ -11,9 +11,6 @@ COPY client/package.json client/package-lock.json ./
 RUN npm install
 COPY client/ ./
 RUN npm run build
-RUN pwd
-RUN ls 
-RUN ls ../
 
 FROM node:alpine
 WORKDIR /usr/src/app

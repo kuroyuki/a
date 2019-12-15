@@ -2,12 +2,12 @@
 import express from 'express';
 import fs from 'fs';
 import { createServer } from 'https';
+import { join } from 'path';
 
 var app = express();
 
-app.get('/', function (req:express.Request, res:express.Response) {
-  res.send('Hello World!');
-});
+
+app.use(express.static(join(__dirname, './public')))
 
 // Certificate
 const privateKey = fs.readFileSync('/certs/privkey.pem', 'utf8');
