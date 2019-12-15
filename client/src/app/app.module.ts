@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { HomeComponent } from './home/home.component';
-import { MatButtonModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatMenuModule } from '@angular/material';
+import { CvComponent } from './cv/cv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopMenuComponent,
-    HomeComponent
+    HomeComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatIconModule
+    MatButtonModule, MatIconModule, MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
