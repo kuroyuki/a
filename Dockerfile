@@ -1,13 +1,13 @@
 FROM node:alpine as server
 WORKDIR /user/src/app
-COPY server/package.json server/package-lock.json
+COPY server/package.json server/package-lock.json ./
 RUN npm install
 COPY server/ ./
 RUN num run build
 
 FROM node:alpine as client
 WORKDIR /user/src/app
-COPY client/package.json client/package-lock.json
+COPY client/package.json client/package-lock.json ./
 RUN npm install
 COPY client/ ./
 RUN num run build
