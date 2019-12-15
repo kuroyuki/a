@@ -6,21 +6,20 @@ import { join } from 'path';
 
 var app = express();
 
-
 app.use(express.static(join(__dirname, './public')))
 
 // Certificate
-const privateKey = fs.readFileSync('/certs/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/certs/cert.pem', 'utf8');
-const ca = fs.readFileSync('/certs/chain.pem', 'utf8');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/yurikzhukov.com/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/yurikzhukov.com/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/yurikzhukov.com/chain.pem', 'utf8');
 
 const credentials = {
 	key: privateKey,
 	cert: certificate,
 	ca: ca
 };
-createServer(credentials, app).listen(3000, function () {
-    console.log('Example app listening on port 3000! Go to https://localhost:3000')
+createServer(credentials, app).listen(443, function () {
+    console.log('Example app listening ! Go to https://localhost')
 })
 
 
