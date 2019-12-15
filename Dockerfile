@@ -15,7 +15,7 @@ RUN npm run build
 FROM node:alpine
 WORKDIR /usr/src/app
 COPY --from=server /usr/src/build /usr/src/app/package.json /usr/src/app/package-lock.json ./
-COPY --from=client /usr/src/build/public ./public
+COPY --from=client /usr/src/app/dist ./public
 
 RUN npm install --production
 
