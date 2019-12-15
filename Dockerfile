@@ -10,7 +10,7 @@ WORKDIR /user/src/app
 COPY client/package.json client/package-lock.json ./
 RUN npm install
 COPY client/ ./
-RUN num run build
+RUN npm run build
 
 FROM node:alpine
 COPY certs/ ./certs
