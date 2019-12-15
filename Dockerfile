@@ -13,7 +13,6 @@ COPY client/ ./
 RUN npm run build
 
 FROM node:alpine
-COPY certs/ ./certs
 COPY --from=server /usr/src/build /usr/src/app/package.json /usr/src/app/package-lock.json ./
 COPY --from=client /usr/src/build/public ./public
 
