@@ -1,0 +1,23 @@
+{
+  "name": "test-app",
+  "version": "0.0.1",
+  "description": "A test NodeJS app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuroyuki/a.git"
+  },
+  "author": "Yuri Zhukov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuroyuki/a/issues"
+  },
+  "homepage": "https://github.com/kuroyuki/a#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
